@@ -35,3 +35,24 @@ select {
 img {
     padding: 5px;
 }
+
+
+.hero-section {
+    height: 45vh;
+    background: linear-gradient(rgba(0,30,68,0.85), rgba(0,30,68,0.85)),
+                url('images/old_main_2.jpg') center/cover no-repeat;
+}
+
+body {
+    background-color: #f4f6f9;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+.card img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
