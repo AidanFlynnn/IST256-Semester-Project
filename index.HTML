@@ -1,103 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
 
-    
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    
+    <!-- FIXED CSS PATH (removed /) -->
     <link rel="stylesheet" href="CSS/styles.css">
 
-    <title>Group 7 Media</title>
+    <title>Group 7</title>
+
+    <!-- FIXED favicon path -->
     <link rel="icon" type="image/x-icon" href="images/Group7.ico">
 </head>
 
 <body>
-
-   
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="images/Group7.ico" width="50" height="50" class="me-2">
-                <strong>Group 7 Media</strong>
-            </a>
+            <img src="images/Group7.ico" width="60" height="60">
 
-            <ul class="navbar-nav ms-auto d-flex flex-row gap-4">
+            <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a href="#" class="nav-link text-white"><strong>Home</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Local News</a>
+                    <a href="#" class="nav-link text-white"><strong>Local News</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Sports</a>
+                    <a href="#" class="nav-link text-white"><strong>Sports</strong></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Politics</a>
+                    <a href="#" class="nav-link text-white"><strong>Politics</strong></a>
                 </li>
             </ul>
 
-            <select class="form-select w-auto ms-3" onchange="window.location.href=this.value">
+            <select class="form-select w-auto ms-auto"
+                    onchange="window.location.href=this.value">
                 <option selected disabled>Account</option>
-                <option value="./HTML/accountReg.html">Registration</option>
-                <option value="./HTML/login.html">Login</option>
+                <option value="HTML/accountReg.html">Registration</option>
+                <option value="HTML/login.html">Login</option>
             </select>
         </div>
     </nav>
+</header>
 
-    
-    <section class="hero-section text-white text-center d-flex align-items-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Your Source for Everything Happy Valley</h1>
-            <p class="lead">Delivering the truth effectively and efficiently.</p>
+<div class="container my-5">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_1.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>Hi, we are Group 7 Media, a one stop shop for everything Happy Valley.</p>
+                </div>
+            </div>
         </div>
-    </section>
 
-    
-    <div class="container my-5">
-        <div class="row g-4">
-
-            <div class="col-md-4">
-                <div class="card shadow-lg h-100">
-                    <img src="images/old_main_1.jpg" class="card-img-top" alt="Old Main 1">
-                    <div class="card-body text-center">
-                        <p>
-                            Hi, we are Group 7 Media, a one stop shop for everything Happy Valley.
-                        </p>
-                    </div>
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_2.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>Access everything from local news to sports and politics.</p>
                 </div>
             </div>
-
-            <div class="col-md-4">
-                <div class="card shadow-lg h-100">
-                    <img src="images/old_main_2.jpg" class="card-img-top" alt="Old Main 2">
-                    <div class="card-body text-center">
-                        <p>
-                            Access everything from local news to sports and politics.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card shadow-lg h-100">
-                    <img src="images/old_main_3.jpg" class="card-img-top" alt="Old Main 3">
-                    <div class="card-body text-center">
-                        <p>
-                            Delivering high-quality content you expect from a professional outlet.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
         </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_3.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>Delivering high-quality content you expect from a professional outlet.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
 
-    
-    <footer class="bg-primary text-white text-center py-3 mt-5">
-        <p class="mb-0"><em>Group 7 Media © 2026</em></p>
-    </footer>
+<footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0"><em>Delivering the truth effectively and efficiently</em></p>
+</footer>
 
 </body>
 </html>
