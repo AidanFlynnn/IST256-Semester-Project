@@ -1,0 +1,33 @@
+{
+    "articles": [
+        {
+            "id":"0", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+
+        {
+            "id":"1", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+
+        {
+            "id":"2", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        }
+    ]
+}
