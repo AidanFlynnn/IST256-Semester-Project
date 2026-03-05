@@ -1,72 +1,87 @@
-<!DOCTYPE html>
+​​<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="CSS/styles.css">
+
     <title>Group 7</title>
-    <link rel="icon" type="images/x-ico" href="images/Group7.ico">
+
+    
+    <link rel="icon" type="image/x-icon" href="images/Group7.ico">
 </head>
+
 <body>
-    <header>
-       <nav class="navbar navbar-expand-lg" data-target="navBarContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <img src="images/Group7.ico" width="60" height="60">
-            </li>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <img src="images/Group7.ico" width="60" height="60">
 
-            <li class="nav-item active navPadding">
-                <a href="#home" class="nav-link"><strong>Home (WIP)</strong></a>
-            </li>
-            <li class="nav-item active navPadding">
-                <a href="#news" class="nav-link"><strong>Local News (WIP)</strong></a>
-            </li>
-            <li class="nav-item active navPadding">
-                <a href="#sports" class="nav-link"><strong>Sports (WIP)</strong></a>
-            </li>
-            <li class="nav-item active navPadding">
-                <a href="#politics" class="nav-link"><strong>Politics (WIP)</strong></a>
-            </li>
-            
-            <select id="page-select" onchange="window.location.href=this.value" placeholder="Account Management">
-                <option selected disabled hidden>Account Management</option>
-                <option value="./HTML/accountReg.html">Registration</option>
-                <option value="./HTML/login.html">Login (WIP)</option>
+            <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white"><strong>Local News</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white"><strong>Sports</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-white"><strong>Politics</strong></a>
+                </li>
+            </ul>
+
+            <select class="form-select w-auto ms-auto"
+                    onchange="window.location.href=this.value">
+                <option selected disabled>Account</option>
+                <option value="HTML/accountReg.html">Registration</option>
+                <option value="HTML/login.html">Login</option>
             </select>
-        </ul>
-       </nav>
-    </header>
+        </div>
+    </nav>
+</header>
 
-    <div class="card">
-        <div class="container-fluid d-flex flex-row card-body">
-            <div class="container-md border rounded">
-                <div class="text-center border-bottom">
-                    <img src="images/old_main_1.jpg" width="352" height="240">
-                </div>
-                <p class="text-center">Hi, we are Group 7 Media, a one stop shop for everything Happy Valley.</p>
-                </div>
-        
-            <div class="container-md border rounded">
-                <div class="text-center border-bottom">
-                    <img src="images/old_main_2.jpg" width="352" height="240">
-                </div>
-                <p class="text-center">Here is our home page were you can access everything from local news, to sports, to politics.</p>
-            </div>
+<div class="container my-5">
+    <div class="row g-4">
 
-            <div class="container-md border rounded">
-                <div class="text-center border-bottom">
-                    <img src="images/old_main_3.jpg" width="352" height="240">
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_1.jpg" class="card-img-top" width="293.99" height="514.65">
+                <div class="card-body text-center">
+                    <p>Hi, we are Group 7 Media, a one stop shop for everything Happy Valley.</p>
                 </div>
-                <p class="text-center">We pride ourselves in delivering high quality content that you would expect from a professional news outlet.</p>
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_2.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>Here is our home page were you can access everything from local news, to sports, to politics.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_3.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>We pride ourselves in delivering high quality content that you would expect from a professional news outlet.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
-    
-</body>
-<footer>
-    <div class="border-bottom">
-        <p class="text-center missionStatement"><i>Delivering the truth effectively and efficiently</i></p>
-    </div>
+</div>
+
+<footer class="bg-primary text-white text-center py-3">
+    <p class="mb-0"><em>Delivering the truth effectively and efficiently</em></p>
 </footer>
+
+</body>
 </html>

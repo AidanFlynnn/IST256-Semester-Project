@@ -25,6 +25,10 @@ header {
 .navPadding {
     padding: 10px 20px;
 }
+.sectionPadding {
+   padding-left: 20px;
+   padding-top: 10px;
+}
 select {
     background-color: white;
     font-weight: 1000;
