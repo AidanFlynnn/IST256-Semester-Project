@@ -1,7 +1,7 @@
 {
     "articles": [
         {
-            "id":"0", 
+            "id":"100", 
             "author": "anAuthor", 
             "dateModified":"aDate",
             "rating": {
@@ -11,7 +11,7 @@
         },
 
         {
-            "id":"1", 
+            "id":"110", 
             "author": "anAuthor", 
             "dateModified":"aDate",
             "rating": {
@@ -21,7 +21,65 @@
         },
 
         {
-            "id":"2", 
+            "id":"120", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+        {
+            "id":"200", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+
+        {
+            "id":"210", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+
+        {
+            "id":"220", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+        {
+            "id":"300", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+
+        {
+            "id":"310", 
+            "author": "anAuthor", 
+            "dateModified":"aDate",
+            "rating": {
+                "likes": 0,
+                "dislikes": 0
+            }
+        },
+
+        {
+            "id":"320", 
             "author": "anAuthor", 
             "dateModified":"aDate",
             "rating": {
