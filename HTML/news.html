@@ -50,9 +50,18 @@
         </header>
 
         <div class="container-fluid" id="checkoutContainer" hidden>
-            <h2>Article Checkout:</h2>
+            <h3>Article Cart:</h3>
             <p id="checkoutList"></p>
-            <p id="cost"></p>
+            <p id="cost" value="0"></p>
+            <p id="checkoutProceed"></p>
+        </div>
+
+        <div class="container-fluid" id="transactionContainer" hidden>
+            <h3>Checkout Items:</h3>
+            <p id="itemList"></p>
+            <p id="transactionCost" value="0"></p>
+            <p class="text-center" id="creditBox"></p>
+            <p class="text-end" id="cancelTransaction"></p>
         </div>
 
         <div class="card">
@@ -67,7 +76,7 @@
                     <div class="container-md text-center">
                         <button type="button" id="100">Like: 0</button>
                         <button type="button" id="101">Dislike: 0</button>
-                        <button type="button" id="102" value="20">Checkout: $20</button>
+                        <button type="button" id="102" value="5">Checkout: $5</button>
                     </div>
                 </div>
                 <div class="container-md border rounded">
@@ -79,7 +88,7 @@
                     <div class="container-md text-center">
                         <button type="button" id="110">Like: 0</button>
                         <button type="button" id="111">Dislike: 0</button>
-                        <button type="button" id="112" value="0">Checkout: $0</button>
+                        <button type="button" id="112" value="1">Checkout: $1</button>
                     </div>           
                 </div>
                 <div class="container-md border rounded">
@@ -91,7 +100,7 @@
                     <div class="container-md text-center">
                         <button type="button" id="120">Like: 0</button>
                         <button type="button" id="121">Dislike: 0</button>
-                        <button type="button" id="122" value="0">Checkout: $0</button>
+                        <button type="button" id="122" value="2">Checkout: $2</button>
                     </div>           
                 </div>            
             </div>
@@ -121,7 +130,7 @@
                     <div class="container-md text-center">
                         <button type="button" id="210">Like: 0</button>
                         <button type="button" id="211">Dislike: 0</button>
-                        <button type="button" id="212" value="0">Checkout: $0</button>
+                        <button type="button" id="212" value="3">Checkout: $3</button>
                     </div>           
                 </div>
                 <div class="container-md border rounded">
@@ -133,7 +142,7 @@
                     <div class="container-md text-center">
                         <button type="button" id="220">Like: 0</button>
                         <button type="button" id="221">Dislike: 0</button>
-                        <button type="button" id="222" value="0">Checkout: $0</button>
+                        <button type="button" id="222" value="2">Checkout: $2</button>
                     </div>           
                 </div>            
             </div>
@@ -151,7 +160,7 @@
                     <div class="container-md text-center">
                         <button type="button" id="300">Like: 0</button>
                         <button type="button" id="301">Dislike: 0</button>
-                        <button type="button" id="302" value="0">Checkout: $0</button>
+                        <button type="button" id="302" value="4">Checkout: $4</button>
                     </div>
                 </div>
                 <div class="container-md border rounded">
@@ -163,7 +172,7 @@
                     <div class="container-md text-center">
                         <button type="button" id="310">Like: 0</button>
                         <button type="button" id="311">Dislike: 0</button>
-                        <button type="button" id="312" value="0">Checkout: $0</button>
+                        <button type="button" id="312" value="1">Checkout: $1</button>
                     </div>           
                 </div>
                 <div class="container-md border rounded">

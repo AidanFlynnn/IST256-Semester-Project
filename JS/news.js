@@ -318,12 +318,15 @@ $("#322").on("click", function() {
 $(document).on("click", ".buttonPress", function() {
     let id = $(this).val();
 
-    let indexFound;
+    let indexFound = 0;
     for (let i = 0; i < articleIDCart.length; i++) {
-        if (articleIDCart[i] == this.id) {
+        if (articleIDCart[i] == $(this).val()) {
             indexFound = i;
         }
     }
+    console.log(indexFound);
+
+
     articleIDCart.splice(indexFound, 1);
     articleCostCart.splice(indexFound, 1)
 
@@ -349,5 +352,72 @@ function getCost() {
     for (let i = 0; i < articleCostCart.length; i++) {
         cost = cost + Number.parseInt(articleCostCart[i]);
     }
-    $("#cost").text(`Cost: \$${cost}`)
+
+    let stringCost = `<p value="${cost}">Cost: \$${cost}</p>`
+    $("#cost").html(stringCost);
+    $("#transactionCost").html(stringCost);
+
+    let htmlString = "";
+    let buttonID = `checkoutBtn`;
+    let button = `<button id=${buttonID}>\$${cost}</button>`;
+    htmlString = `Proceed to Checkout: ${button}`
+    $("#checkoutProceed").addClass("text-center")
+    $("#checkoutProceed").html(htmlString);
 }
+
+$(document).on("click", "#checkoutBtn", function() {
+    $("#checkoutContainer").attr("hidden", true);
+    $("#transactionContainer").attr("hidden", false);
+    let htmlString = "";
+    for (let i = 0; i < articleIDCart.length; i++) {
+        htmlString = htmlString + `Article ID: ${articleIDCart[i]}, Price: \$${articleCostCart[i]}<br>`;
+    }
+    $("#itemList").html(htmlString);
+    getCost();
+
+    htmlString = "";
+    let textAreaBox = `<input type="text" id="creditInfo" placeholder="0123-4567-8910-1112"></input>`
+    let button = `<button id="transactionCheckout">Complete Transaction</button>`
+    htmlString = htmlString + `Enter Credit Card Info: ${textAreaBox} ${button}`;
+    $("#creditBox").html(htmlString);
+
+    htmlString = "";
+    button = `<button id="transactionCancelBtn">Cancel Transaction</button>`
+    htmlString = htmlString + `${button}`;
+    $("#cancelTransaction").html(htmlString);
+})
+
+$(document).on("click", "#transactionCheckout", function() {
+    let creditNumber = $("#creditInfo").val();
+
+    let checkoutButtons = [102, 112, 122, 202, 212, 222, 302, 312, 322];
+
+    let cardExp = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+    if (cardExp.test(creditNumber) == true) {
+        articleIDCart = [];
+        articleCostCart = [];
+        $("#transactionContainer").attr("hidden", true);
+        alert("Transaction Successful, Thank You for your Purchase!")
+
+        for (let i = 0; i < checkoutButtons.length; i++) {
+            let buttonEnable = `#${checkoutButtons[i]}`
+            $(buttonEnable).attr("disabled", false);
+        }
+    }
+    else {
+        alert("Invalid Card Info");
+    }
+})
+
+$(document).on("click", "#transactionCancelBtn", function() {
+    let checkoutButtons = [102, 112, 122, 202, 212, 222, 302, 312, 322];
+    articleIDCart = [];
+    articleCostCart = [];
+
+    $("#transactionContainer").attr("hidden", true);
+    alert("Transaction Successfully Canceled")
+    for (let i = 0; i < checkoutButtons.length; i++) {
+        let buttonEnable = `#${checkoutButtons[i]}`
+        $(buttonEnable).attr("disabled", false);
+    }
+})
