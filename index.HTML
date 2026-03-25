@@ -7,17 +7,14 @@
 <link rel="stylesheet" href="CSS/styles.css">
 
 <title>Group 7</title>
-<link rel="icon" type="images/x-ico" href="images/Group7.ico">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="icon" href="images/Group7.ico">
 
 <style>
 
-
+/* MAIN HEADLINE */
 .main-headline {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
 .main-img {
@@ -26,26 +23,17 @@
     object-fit: cover;
 }
 
-.main-desc {
+/* SIDE ARTICLES */
+.side-article {
     font-size: 14px;
-}
-
-/* ===== SIDE ARTICLES ===== */
-.small-articles p {
-    font-size: 14px;
-    margin-bottom: 8px;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 6px;
+    padding: 8px 0;
 }
 
-/* ===== GRID ARTICLES ===== */
+/* GRID ARTICLES */
 .article-card {
     width: 30%;
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background: white;
 }
 
 .article-card img {
@@ -56,11 +44,6 @@
 
 .article-card h3 {
     font-size: 16px;
-    font-weight: bold;
-}
-
-.article-card p {
-    font-size: 12px;
 }
 
 </style>
@@ -69,53 +52,71 @@
 
 <body>
 
-
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-        <img src="images/Group7.ico" width="60" height="60">
+        <img src="images/Group7.ico" width="60">
 
         <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
             <li><a href="index.html" class="nav-link text-white"><strong>Home</strong></a></li>
-            <li><a href="#Local" class="nav-link text-white"><strong>Local News</strong></a></li>
-            <li><a href="#Sports" class="nav-link text-white"><strong>Sports</strong></a></li>
-            <li><a href="#Politics" class="nav-link text-white"><strong>Politics</strong></a></li>
+            <li><a href="#" class="nav-link text-white"><strong>Local News</strong></a></li>
+            <li><a href="#" class="nav-link text-white"><strong>Sports</strong></a></li>
+            <li><a href="#" class="nav-link text-white"><strong>Politics</strong></a></li>
         </ul>
 
-        <select class="form-select w-auto ms-auto" onchange="window.location.href=this.value">
-            <option selected disabled>Account</option>
-            <option value="HTML/accountReg.html">Registration</option>
-            <option value="HTML/login.html">Login</option>
+        <select class="form-select w-auto ms-auto">
+            <option>Account</option>
         </select>
     </div>
 </nav>
 
-
+<!-- 🔥 CNN TOP SECTION -->
 <div class="container mt-4">
     <div class="row">
 
-
+        <!-- LEFT -->
         <div class="col-md-3">
-            <div id="leftStories" class="small-articles"></div>
+            <div class="side-article">Local story headline</div>
+            <div class="side-article">Another headline</div>
+            <div class="side-article">Breaking news</div>
         </div>
 
-
+        <!-- CENTER -->
         <div class="col-md-6">
-            <h1 id="mainTitle" class="main-headline"></h1>
-            <img id="mainImage" class="main-img">
-            <p id="mainDesc" class="main-desc"></p>
+            <h1 class="main-headline">Big headline goes here</h1>
+            <img src="images/news1.jpg" class="main-img">
+            <p>Short description of the main story goes here.</p>
         </div>
 
-
+        <!-- RIGHT -->
         <div class="col-md-3">
-            <div id="rightStories" class="small-articles"></div>
+            <div class="side-article">Trending story</div>
+            <div class="side-article">Another update</div>
+            <div class="side-article">Latest news</div>
         </div>
 
     </div>
 </div>
 
-<div class="container mt-4 d-flex flex-wrap" id="articleGrid"></div>
+<!-- 🔥 GRID BELOW -->
+<div class="container mt-4 d-flex flex-wrap">
 
-<script src="JS/news.js"></script>
+    <div class="article-card">
+        <img src="images/news1.jpg">
+        <h3>Article title</h3>
+    </div>
+
+    <div class="article-card">
+        <img src="images/news2.jpg">
+        <h3>Article title</h3>
+    </div>
+
+    <div class="article-card">
+        <img src="images/news3.jpg">
+        <h3>Article title</h3>
+    </div>
+
+</div>
 
 </body>
 
