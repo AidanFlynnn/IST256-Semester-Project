@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    fetch("JSON/articleInfo.json") 
+    fetch(fetch("../JSON/articleInfo.json")) 
     .then(res => res.json())
     .then(data => {
 
