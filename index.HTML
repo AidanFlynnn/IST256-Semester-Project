@@ -1,80 +1,166 @@
-​​<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/styles.css">
-    <title>Group 7</title> 
-    <link rel="icon" type="image/x-icon" href="images/Group7.ico">
+<meta charset="UTF-8">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="CSS/styles.css">
+
+<title>Group 7</title>
+<link rel="icon" type="images/x-ico" href="images/Group7.ico">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+#mainTitle {
+    font-size: 36px;
+    font-weight: bold;
+}
+#mainImage {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+.side-story {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.card {
+    margin: 20px;
+    padding: 10px;
+}
+</style>
+
 </head>
 
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <img src="images/Group7.ico" width="60" height="60">
 
-            <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
-                <li class="nav-item">
-                    <a href="/index.HTML" class="nav-link text-white"><strong>Home</strong></a>
-                </li>
-                <li class="nav-item">
-                    <a href="/HTML/news.html#Local" class="nav-link text-white"><strong>Local News</strong></a>
-                </li>
-                <li class="nav-item">
-                    <a href="/HTML/news.html#Sports" class="nav-link text-white"><strong>Sports</strong></a>
-                </li>
-                <li class="nav-item">
-                    <a href="/HTML/news.html#Politics" class="nav-link text-white"><strong>Politics</strong></a>
-                </li>
-            </ul>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <img src="images/Group7.ico" width="60" height="60">
 
-            <select class="form-select w-auto ms-auto"
-                    onchange="window.location.href=this.value">
-                <option selected disabled>Account</option>
-                <option value="HTML/accountReg.html">Registration</option>
-                <option value="HTML/login.html">Login</option>
-            </select>
-        </div>
-    </nav>
-</header>
+        <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
+            <li><a href="index.html" class="nav-link text-white"><strong>Home</strong></a></li>
+            <li><a href="#Local" class="nav-link text-white"><strong>Local News</strong></a></li>
+            <li><a href="#Sports" class="nav-link text-white"><strong>Sports</strong></a></li>
+            <li><a href="#Politics" class="nav-link text-white"><strong>Politics</strong></a></li>
+        </ul>
 
-<div class="container my-5">
-    <div class="row g-4">
+        <select class="form-select w-auto ms-auto" onchange="window.location.href=this.value">
+            <option selected disabled>Account</option>
+            <option value="HTML/accountReg.html">Registration</option>
+            <option value="HTML/login.html">Login</option>
+        </select>
+    </div>
+</nav>
 
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <img src="images/old_main_1.jpg" class="card-img-top">
-                <div class="card-body text-center">
-                    <p>Hi, we are Group 7 Media, a one stop shop for everything Happy Valley.</p>
-                </div>
-            </div>
+<!-- 🔥 CNN TOP SECTION -->
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-md-3" id="leftStories"></div>
+
+        <div class="col-md-6 text-center">
+            <h1 id="mainTitle"></h1>
+            <img id="mainImage" class="img-fluid my-3">
+            <p id="mainDesc"></p>
         </div>
 
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <img src="images/old_main_2.jpg" class="card-img-top">
-                <div class="card-body text-center">
-                    <p>Here is our home page were you can access everything from local news, to sports, to politics.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card shadow h-100">
-                <img src="images/old_main_3.jpg" class="card-img-top">
-                <div class="card-body text-center">
-                    <p>We pride ourselves in delivering high quality content that you would expect from a professional news outlet.</p>
-                </div>
-            </div>
-        </div>
+        <div class="col-md-3" id="rightStories"></div>
 
     </div>
 </div>
 
-<footer class="bg-primary text-white text-center py-3">
-    <p class="mb-0"><em>Delivering the truth effectively and efficiently</em></p>
-</footer>
+<!-- ARTICLE SECTIONS -->
+<div class="card" id="Local">
+    <h2>Local</h2>
+    <div class="container-fluid d-flex flex-row card-body">
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="Sports">
+    <h2>Sports</h2>
+    <div class="container-fluid d-flex flex-row card-body">
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+    </div>
+</div>
+
+<div class="card" id="Politics">
+    <h2>Politics</h2>
+    <div class="container-fluid d-flex flex-row card-body">
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+        <div class="container-md border rounded">
+            <img src="">
+            <h3>Title</h3>
+            <h4>Author</h4>
+            <h5>Date</h5>
+            <p>Description</p>
+        </div>
+    </div>
+</div>
+
+<script src="JS/news.js"></script>
 
 </body>
+
+<footer class="bg-primary text-white text-center py-3">
+    <p><em>Delivering the truth effectively and efficiently</em></p>
+</footer>
+
 </html>
