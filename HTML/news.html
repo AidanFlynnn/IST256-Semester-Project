@@ -1,201 +1,103 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS/styles.css">
-    <title>Group 7</title>
-    <link rel="icon" type="images/x-ico" href="/images/Group7.ico">
-    <link href="/JSON/articleInfo.json">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <style>
-        .padding {
-            padding-bottom: 100px;
-        }
-        button {
-            margin-bottom: 20px;
-            margin-right: 5px;
-        }
-    </style>
-    </head>
-     
-    <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <div class="container">
-                    <img src="/images/Group7.ico" width="60" height="60">
-                    <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
-                        <li class="nav-item">
-                            <a href="/index.HTML" class="nav-link text-white"><strong>Home</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#Local" class="nav-link text-white"><strong>Local News</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#Sports" class="nav-link text-white"><strong>Sports</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#Politics" class="nav-link text-white"><strong>Politics</strong></a>
-                        </li>
-                    </ul>
+<head>
+<meta charset="UTF-8">
 
-                    <select class="form-select w-auto ms-auto"
-                            onchange="window.location.href=this.value">
-                        <option selected disabled>Account</option>
-                        <option value="HTML/accountReg.html">Registration</option>
-                        <option value="HTML/login.html">Login</option>
-                    </select>
-                </div>
-            </nav>
-        </header>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/CSS/styles.css">
 
-        <div class="container-fluid" id="checkoutContainer" hidden>
-            <h3>Article Cart:</h3>
-            <p id="checkoutList"></p>
-            <p id="cost" value="0"></p>
-            <p id="checkoutProceed"></p>
+<title>Group 7</title>
+<link rel="icon" type="images/x-ico" href="/images/Group7.ico">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+.padding {
+    padding-bottom: 100px;
+}
+button {
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+#mainTitle {
+    font-size: 36px;
+    font-weight: bold;
+}
+#mainImage {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+.side-story {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <img src="/images/Group7.ico" width="60" height="60">
+
+        <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
+            <li><a href="/index.HTML" class="nav-link text-white"><strong>Home</strong></a></li>
+            <li><a href="#Local" class="nav-link text-white"><strong>Local News</strong></a></li>
+            <li><a href="#Sports" class="nav-link text-white"><strong>Sports</strong></a></li>
+            <li><a href="#Politics" class="nav-link text-white"><strong>Politics</strong></a></li>
+        </ul>
+
+        <select class="form-select w-auto ms-auto" onchange="window.location.href=this.value">
+            <option selected disabled>Account</option>
+            <option value="HTML/accountReg.html">Registration</option>
+            <option value="HTML/login.html">Login</option>
+        </select>
+    </div>
+</nav>
+</header>
+
+<div class="container mt-4">
+    <div class="row">
+
+        <div class="col-md-3" id="leftStories"></div>
+
+        <div class="col-md-6 text-center">
+            <h1 id="mainTitle"></h1>
+            <img id="mainImage" class="img-fluid my-3">
+            <p id="mainDesc"></p>
         </div>
 
-        <div class="container-fluid" id="transactionContainer" hidden>
-            <h3>Checkout Items:</h3>
-            <p id="itemList"></p>
-            <p id="transactionCost" value="0"></p>
-            <p class="text-center" id="creditBox"></p>
-            <p class="text-end" id="cancelTransaction"></p>
-        </div>
+        <div class="col-md-3" id="rightStories"></div>
 
-        <div class="card">
-            <h2 class="sectionPadding">Local</h2>
-            <div class="container-fluid d-flex flex-row card-body padding"> 
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class="text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="100">Like: 0</button>
-                        <button type="button" id="101">Dislike: 0</button>
-                        <button type="button" id="102" value="5">Checkout: $5</button>
-                    </div>
-                </div>
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class="text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="110">Like: 0</button>
-                        <button type="button" id="111">Dislike: 0</button>
-                        <button type="button" id="112" value="1">Checkout: $1</button>
-                    </div>           
-                </div>
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class = "text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="120">Like: 0</button>
-                        <button type="button" id="121">Dislike: 0</button>
-                        <button type="button" id="122" value="2">Checkout: $2</button>
-                    </div>           
-                </div>            
-            </div>
-        </div>
+    </div>
+</div>
 
-        <div class="card" id="Sports">
-            <h2 class="sectionPadding">Sports</h2>
-            <div class="container-fluid d-flex flex-row card-body padding"> 
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class="text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="200">Like: 0</button>
-                        <button type="button" id="201">Dislike: 0</button>
-                        <button type="button" id="202" value="0">Checkout: $0</button>
-                    </div>
-                </div>
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class="text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="210">Like: 0</button>
-                        <button type="button" id="211">Dislike: 0</button>
-                        <button type="button" id="212" value="3">Checkout: $3</button>
-                    </div>           
-                </div>
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class = "text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="220">Like: 0</button>
-                        <button type="button" id="221">Dislike: 0</button>
-                        <button type="button" id="222" value="2">Checkout: $2</button>
-                    </div>           
-                </div>            
-            </div>
-        </div>
+<div class="container-fluid" id="checkoutContainer" hidden>
+    <h3>Article Cart:</h3>
+    <p id="checkoutList"></p>
+    <p id="cost" value="0"></p>
+    <p id="checkoutProceed"></p>
+</div>
 
-        <div class="card" id="Politics">
-            <h2 class="sectionPadding">Politics</h2>
-            <div class="container-fluid d-flex flex-row card-body padding"> 
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class="text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="300">Like: 0</button>
-                        <button type="button" id="301">Dislike: 0</button>
-                        <button type="button" id="302" value="4">Checkout: $4</button>
-                    </div>
-                </div>
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class="text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="310">Like: 0</button>
-                        <button type="button" id="311">Dislike: 0</button>
-                        <button type="button" id="312" value="1">Checkout: $1</button>
-                    </div>           
-                </div>
-                <div class="container-md border rounded">
-                    <img src="">
-                    <h3 class = "text-center">Title</h3>
-                    <h4>Author</h4>
-                    <h5>DateModified</h5>  
-                    <p>Generic Satire Text</p>
-                    <div class="container-md text-center">
-                        <button type="button" id="320">Like: 0</button>
-                        <button type="button" id="321">Dislike: 0</button>
-                        <button type="button" id="322" value="0">Checkout: $0</button>
-                    </div>           
-                </div>            
-            </div>
-        </div>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-        <script src="/JS/news.js"></script>
-    </body>
+<div class="container-fluid" id="transactionContainer" hidden>
+    <h3>Checkout Items:</h3>
+    <p id="itemList"></p>
+    <p id="transactionCost" value="0"></p>
+    <p class="text-center" id="creditBox"></p>
+    <p class="text-end" id="cancelTransaction"></p>
+</div>
 
-    <footer class="bg-primary text-white text-center py-3">
-        <p class="mb-0"><em>Delivering the truth effectively and efficiently</em></p>
-    </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/JS/news.js"></script>
+
+</body>
+
+<footer class="bg-primary text-white text-center py-3">
+    <p><em>Delivering the truth effectively and efficiently</em></p>
+</footer>
 
 </html>
