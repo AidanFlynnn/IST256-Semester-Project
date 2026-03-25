@@ -1,127 +1,80 @@
-<!DOCTYPE html>
+​​<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="CSS/styles.css">
-
-<title>Group 7</title>
-<link rel="icon" href="images/Group7.ico">
-
-<style>
-
-/* MAIN HEADLINE */
-.main-headline {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.main-img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-}
-
-/* SIDE ARTICLES */
-.side-article {
-    font-size: 14px;
-    border-bottom: 1px solid #ddd;
-    padding: 8px 0;
-}
-
-/* GRID ARTICLES */
-.article-card {
-    width: 30%;
-    margin: 10px;
-}
-
-.article-card img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-}
-
-.article-card h3 {
-    font-size: 16px;
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Group 7</title> 
+    <link rel="icon" type="image/x-icon" href="images/Group7.ico">
 </head>
 
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <img src="images/Group7.ico" width="60" height="60">
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container">
-        <img src="images/Group7.ico" width="60">
+            <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
+                <li class="nav-item">
+                    <a href="/index.HTML" class="nav-link text-white"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/HTML/news.html#Local" class="nav-link text-white"><strong>Local News</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/HTML/news.html#Sports" class="nav-link text-white"><strong>Sports</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a href="/HTML/news.html#Politics" class="nav-link text-white"><strong>Politics</strong></a>
+                </li>
+            </ul>
 
-        <ul class="navbar-nav ms-4 d-flex flex-row gap-4">
-            <li><a href="index.html" class="nav-link text-white"><strong>Home</strong></a></li>
-            <li><a href="#" class="nav-link text-white"><strong>Local News</strong></a></li>
-            <li><a href="#" class="nav-link text-white"><strong>Sports</strong></a></li>
-            <li><a href="#" class="nav-link text-white"><strong>Politics</strong></a></li>
-        </ul>
+            <select class="form-select w-auto ms-auto"
+                    onchange="window.location.href=this.value">
+                <option selected disabled>Account</option>
+                <option value="HTML/accountReg.html">Registration</option>
+                <option value="HTML/login.html">Login</option>
+            </select>
+        </div>
+    </nav>
+</header>
 
-        <select class="form-select w-auto ms-auto">
-            <option>Account</option>
-        </select>
-    </div>
-</nav>
+<div class="container my-5">
+    <div class="row g-4">
 
-<!-- 🔥 CNN TOP SECTION -->
-<div class="container mt-4">
-    <div class="row">
-
-        <!-- LEFT -->
-        <div class="col-md-3">
-            <div class="side-article">Local story headline</div>
-            <div class="side-article">Another headline</div>
-            <div class="side-article">Breaking news</div>
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_1.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>Hi, we are Group 7 Media, a one stop shop for everything Happy Valley.</p>
+                </div>
+            </div>
         </div>
 
-        <!-- CENTER -->
-        <div class="col-md-6">
-            <h1 class="main-headline">Big headline goes here</h1>
-            <img src="images/news1.jpg" class="main-img">
-            <p>Short description of the main story goes here.</p>
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_2.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>Here is our home page were you can access everything from local news, to sports, to politics.</p>
+                </div>
+            </div>
         </div>
 
-        <!-- RIGHT -->
-        <div class="col-md-3">
-            <div class="side-article">Trending story</div>
-            <div class="side-article">Another update</div>
-            <div class="side-article">Latest news</div>
+        <div class="col-md-4">
+            <div class="card shadow h-100">
+                <img src="images/old_main_3.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                    <p>We pride ourselves in delivering high quality content that you would expect from a professional news outlet.</p>
+                </div>
+            </div>
         </div>
 
     </div>
 </div>
-
-<!-- 🔥 GRID BELOW -->
-<div class="container mt-4 d-flex flex-wrap">
-
-    <div class="article-card">
-        <img src="images/news1.jpg">
-        <h3>Article title</h3>
-    </div>
-
-    <div class="article-card">
-        <img src="images/news2.jpg">
-        <h3>Article title</h3>
-    </div>
-
-    <div class="article-card">
-        <img src="images/news3.jpg">
-        <h3>Article title</h3>
-    </div>
-
-</div>
-
-</body>
 
 <footer class="bg-primary text-white text-center py-3">
-    <p><em>Delivering the truth effectively and efficiently</em></p>
+    <p class="mb-0"><em>Delivering the truth effectively and efficiently</em></p>
 </footer>
 
+</body>
 </html>
